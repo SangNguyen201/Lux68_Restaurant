@@ -4,7 +4,7 @@ header {
   background: url(/img/slider-banner-1.jpg) no-repeat center;
   background-size: cover;
   position: relative;
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     padding-bottom: 50px;
   }
   @media (max-width: 576px) {
@@ -34,7 +34,7 @@ header {
         }
       }
     }
-    @media (max-width: 992px) {
+    @media (max-width: 991px) {
       &.header-top {
         display: none;
       }
@@ -68,14 +68,15 @@ header {
     display: block;
     z-index: 999;
     transition: 0.5s;
-    top: 40px;
+    top: 20px;
+    margin-top: 15px;
     // margin-top: 20px;
 
-    @media (max-width: 992px) {
+    @media (max-width: 991px) {
       & {
         top: 0px;
       }
-      @media (max-width: 768px) {
+      @media (max-width: 767px) {
         top: 0px;
       }
     }
@@ -84,19 +85,24 @@ header {
       top: 0;
       background-color: rgb(0 0 0 / 50%);
 
-      @media (max-width: 992px) {
+      @media (max-width: 991px) {
         & {
-          top: 10px;
+          top: 0px;
           background-color: rgb(0 0 0 / 50%);
         }
       }
       @media (max-width: 576px) {
         & {
-          top: 15px;
+          top: 0px;
         }
       }
     }
     .inner {
+      margin-top: 25px;
+      @media (max-width: 575px) {
+        margin-top: 0;
+        top: 0;
+      }
       @include display("mid");
       align-items: center;
       @media (max-width: 991px) {
@@ -144,7 +150,7 @@ header {
       text-transform: uppercase;
       letter-spacing: 2px;
       color: $text-color;
-      @media (max-width: 992px) {
+      @media (max-width: 991px) {
         padding-top: 10px;
         letter-spacing: 1px;
       }

@@ -1,5 +1,8 @@
 .s-event {
   margin: 100px 0;
+  @media (max-width: 575px) {
+    margin: 50px 0;
+  }
   .content {
     .intro {
       color: $text-color;
@@ -14,9 +17,6 @@
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    img {
-      transition: 0.5s;
-    }
     &::before {
       position: absolute;
       top: 0;
@@ -60,6 +60,12 @@
       .descript {
         font-size: 24px;
         font-family: $font-banner;
+      }
+    }
+    .thump {
+      img {
+        transition: 0.5s;
+        width: 100%;
       }
     }
   }

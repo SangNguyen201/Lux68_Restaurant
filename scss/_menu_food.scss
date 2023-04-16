@@ -51,6 +51,9 @@
       top: 0;
       right: 0;
       animation: item-right linear 3s infinite alternate;
+      @media (max-width: 767px) {
+        display: none;
+      }
     }
   }
   .thump {

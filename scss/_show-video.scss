@@ -26,10 +26,10 @@
       i {
         font-size: 40px;
         cursor: pointer;
-        border: 1px solid #fff;
         display: inline-block;
         border-radius: 50%;
         width: 100px;
+        color: #fff;
         height: 100px;
         display: flex;
         align-items: center;
@@ -77,17 +77,27 @@
       font-family: $font-banner;
       max-width: 800px;
       margin: 0 auto;
+      @media (max-width: 767px) {
+        font-size: 24px;
+      }
     }
     .name {
       color: $text-color;
       letter-spacing: 2px;
     }
     .achivement {
+      @media (max-width: 575px) {
+        display: none;
+      }
       .item {
         align-items: center;
+
         .number {
           font-size: 50px;
           font-family: $font-banner;
+          @media (max-width: 767px) {
+            font-size: 24px;
+          }
         }
         .text {
           color: $text-color;

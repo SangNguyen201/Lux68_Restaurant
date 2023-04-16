@@ -71,6 +71,9 @@ footer {
             letter-spacing: 1px;
             font-size: 14px;
             @include btn();
+            @media (max-width: 575px) {
+              margin-top: 25px;
+            }
           }
         }
       }

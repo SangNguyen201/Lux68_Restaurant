@@ -3,6 +3,9 @@
   .item-knife {
     position: absolute;
     left: 0;
+    @media (max-width: 575px) {
+      display: none;
+    }
   }
   .bg-option {
     position: absolute;

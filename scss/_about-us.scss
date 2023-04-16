@@ -82,13 +82,16 @@
         right: 0;
         top: 0;
       }
+      @media (max-width: 767px) {
+        display: none;
+      }
     }
     .decor-around {
       position: absolute;
       right: -30px;
       top: -40px;
       animation: decor-around linear 15s infinite;
-      @media (max-width: 575px) {
+      @media (max-width: 767px) {
         display: none;
       }
     }

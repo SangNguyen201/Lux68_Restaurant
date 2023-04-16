@@ -1,7 +1,7 @@
 @import "base";
 header {
   padding-bottom: 100px;
-  background: url(/img/slider-banner-1.jpg) no-repeat center;
+  background-image: url(/img/slider-banner-1.jpg);
   background-size: cover;
   position: relative;
   @media (max-width: 767px) {

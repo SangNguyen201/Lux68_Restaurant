@@ -154,7 +154,7 @@ li {
 }
 header {
   padding-bottom: 100px;
-  background: url(/img/slider-banner-1.jpg) no-repeat center;
+  background-image: url(/img/slider-banner-1.jpg);
   background-size: cover;
   position: relative;
 }
@@ -1432,7 +1432,7 @@ li {
   font-size: 16px;
 }
 .s-reservation .main {
-  padding: 10px 75px 10px;
+  padding: 20px;
 }
 .s-reservation .main .field {
   position: relative;
@@ -1514,7 +1514,7 @@ li {
 }
 .s-reservation .pattern {
   font-size: 16px;
-  background: url(/img/pattern1.png);
+  background: url(img/pattern1.png);
 }
 .s-reservation .pattern li {
   color: #a7a7a7;

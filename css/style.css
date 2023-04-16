@@ -1434,6 +1434,11 @@ li {
 .s-reservation .main {
   padding: 20px;
 }
+@media (max-width: 575px) {
+  .s-reservation .main {
+    padding: 0;
+  }
+}
 .s-reservation .main .field {
   position: relative;
 }

@@ -1,0 +1,94 @@
+footer {
+  background: linear-gradient(to top, #00000074, #00000074),
+    url(/img/bg-footer.jpg) no-repeat center;
+  .inner-footer {
+    .center {
+      position: relative;
+      .thump {
+        width: 100%;
+        &::before {
+          content: "";
+          position: absolute;
+          background: url(/img/separator.3.svg);
+          width: 15px;
+          height: 100%;
+          left: 0;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          background: url(/img/separator.3.svg);
+          width: 15px;
+          height: 100%;
+          right: 0;
+        }
+      }
+      .content {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        .brand {
+          h3 {
+            font-family: $font-banner;
+            font-size: 40px;
+          }
+          p {
+            color: $text-color;
+            letter-spacing: 2px;
+          }
+        }
+        .contact {
+          color: #a7a7a7;
+        }
+        .hook {
+          .tittle {
+            font-family: $font-banner;
+          }
+          .discount span {
+            color: $text-color;
+          }
+        }
+        .btn-center {
+          justify-content: center;
+          @media (max-width: 575px) {
+            display: block !important;
+          }
+          .email input {
+            padding: 18px 20px;
+            width: 300px;
+            background-color: #1a1b1c;
+            color: #fff;
+            border: 1px solid $text-color;
+            outline-color: $text-color;
+          }
+          .sub button {
+            padding: 15px 20px;
+            width: 170px;
+            border: none;
+            background-color: $text-color;
+            letter-spacing: 1px;
+            font-size: 14px;
+            @include btn();
+          }
+        }
+      }
+    }
+    .inner {
+      ul {
+        li {
+          margin: 30px 0;
+          a {
+            color: #a7a7a7;
+            text-decoration: none;
+            transition: 0.5s;
+          }
+          &:hover a {
+            color: $text-color;
+          }
+        }
+      }
+    }
+  }
+}

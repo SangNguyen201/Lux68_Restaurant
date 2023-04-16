@@ -1,0 +1,96 @@
+.s-about-us {
+  @media (max-width: 768px) {
+    padding: 0 !important;
+  }
+  background: rgb(0 0 0);
+  position: relative;
+  .bg-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .inner-left {
+    max-width: 390px;
+    @media (max-width: 768px) {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+    .intro {
+      color: $text-color;
+      letter-spacing: 2px;
+    }
+    .tittle {
+      font-size: 40px;
+      font-family: $font-banner;
+      @media (max-width: 992px) {
+        font-size: 32px;
+      }
+      @media (max-width: 576px) {
+        font-size: 24px;
+      }
+    }
+    .detail {
+      line-height: 30px;
+    }
+    .contact {
+      .booking {
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .phone-number {
+        font-size: 24px;
+        color: $text-color;
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background-color: $text-color;
+          transition: 0.5s;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 5px;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background-color: $text-color;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+  .inner-right {
+    .thump img {
+      width: 100%;
+    }
+    position: relative;
+    .text-around {
+      position: absolute;
+      right: 0;
+      top: -20px;
+      font-family: $font-banner;
+      font-size: 24px;
+      line-height: 25px;
+      @media (max-width: 992px) {
+        right: 0;
+        top: 0;
+      }
+    }
+    .decor-around {
+      position: absolute;
+      right: -30px;
+      top: -40px;
+      animation: decor-around linear 15s infinite;
+      @media (max-width: 575px) {
+        display: none;
+      }
+    }
+  }
+}

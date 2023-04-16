@@ -1,0 +1,137 @@
+.s-categories {
+  @media (max-width: 768px) {
+    padding: 0 !important;
+  }
+  .side {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      background: url(/img/separator.3.svg);
+      height: 100%;
+      left: 0;
+      width: 1%;
+      top: 0;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      background: url(/img/separator.3.svg);
+      height: 100%;
+      right: 0;
+      top: 0;
+      width: 1%;
+    }
+  }
+  .inner {
+    @media (max-width: 768px) {
+      padding: 0 !important;
+    }
+    .slick-prev {
+      left: 10px;
+      background-color: $text-color;
+      color: $text-color;
+      @media (max-width: 768px) {
+        top: 140px;
+      }
+      @media (max-width: 576px) {
+        top: 120px;
+        width: 35px;
+        height: 35px;
+      }
+    }
+    .slick-next {
+      right: 10px;
+      background-color: $text-color;
+      color: $text-color;
+      @media (max-width: 768px) {
+        top: 135px;
+      }
+      @media (max-width: 576px) {
+        top: 115px;
+        width: 35px;
+        height: 35px;
+      }
+    }
+    .fix {
+      @media (max-width: 992px) {
+        padding: 0;
+      }
+      @media (max-width: 768px) {
+        padding: 0;
+      }
+      img {
+        @media (max-width: 992px) {
+          width: 95%;
+        }
+        @media (max-width: 768px) {
+          width: 94%;
+        }
+        @media (max-width: 576px) {
+          width: 92%;
+        }
+      }
+    }
+    .box {
+      cursor: pointer;
+      img {
+        position: relative;
+        &::before {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          z-index: 2;
+          display: block;
+          content: "";
+          width: 0;
+          height: 0;
+          background: rgba(255, 255, 255, 0.2);
+          border-radius: 100%;
+          -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          opacity: 0;
+          &:hover::before {
+            animation: circle 0.75s;
+          }
+        }
+      }
+    }
+    .slick-slide img {
+      display: inline-block;
+    }
+    background-color: #000000c7;
+    .intro {
+      color: $text-color;
+      letter-spacing: 2px;
+    }
+    .tittle {
+      font-size: 40px;
+      font-family: $font-banner;
+      @media (max-width: 992px) {
+        font-size: 32px;
+      }
+      @media (max-width: 768px) {
+        font-size: 24px;
+      }
+    }
+    .name {
+      font-family: $font-banner;
+      @media (max-width: 992px) {
+        font-size: 18px;
+      }
+      @media (max-width: 576px) {
+        font-size: 14px;
+      }
+    }
+    .text {
+      color: #a7a7a7;
+    }
+    .price {
+      color: $text-color;
+      font-size: 18px;
+      @media (max-width: 576px) {
+        font-size: 14px;
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: $font-text;
+  color: #fff;
+  font-size: 16px;
+  position: relative;
+  background-color: #171819;
+  @media (max-width: 992px) {
+    font-size: 14px;
+  }
+  @media (max-width: 576px) {
+    font-size: 12px;
+  }
+}
+li {
+  list-style-type: none;
+}
+// animate booking-btn
+@keyframes booking {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+// animate bg menu food left
+@keyframes item-left {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: 30px;
+  }
+}
+// animate bg menu food right
+@keyframes item-right {
+  from {
+    top: 0;
+  }
+  to {
+    top: 30px;
+  }
+}
+
+@keyframes shine {
+  100% {
+    left: 100%;
+  }
+}

@@ -1,0 +1,70 @@
+.s-chef-team {
+  position: relative;
+  .item-knife {
+    position: absolute;
+    left: 0;
+  }
+  .bg-option {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .content {
+    .intro {
+      color: $text-color;
+      letter-spacing: 2px;
+    }
+    .tittle {
+      font-size: 40px;
+      font-family: $font-banner;
+    }
+  }
+  .inner-box {
+    .thump {
+      position: relative;
+      overflow-x: hidden;
+      cursor: pointer;
+      .layer {
+        position: absolute;
+        top: 0;
+        width: 0;
+        height: 100%;
+        background-color: rgb(228 197 144 / 50%);
+        transition: all 0.5s;
+        .icon {
+          display: inline-block;
+          display: flex;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-100%, -50%);
+          i {
+            font-size: 24px;
+            background-color: #000;
+            padding: 10px;
+            margin: 0 2px;
+          }
+        }
+      }
+      &:hover .layer {
+        width: 100%;
+      }
+      &:hover .icon {
+        transform: translate(-50%, -50%);
+      }
+    }
+    .infor {
+      .name {
+        font-family: $font-banner;
+        font-size: 32px;
+      }
+      .career {
+        color: $text-color;
+        letter-spacing: 2px;
+      }
+      .text {
+        color: #a7a7a7;
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.s-event {
+  margin: 100px 0;
+  .content {
+    .intro {
+      color: $text-color;
+      letter-spacing: 2px;
+    }
+    .tittle {
+      font-size: 40px;
+      font-family: $font-banner;
+    }
+  }
+  .inner-box {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    img {
+      transition: 0.5s;
+    }
+    &::before {
+      position: absolute;
+      top: 0;
+      left: -75%;
+      z-index: 2;
+      content: "";
+      width: 40%;
+      height: 100%;
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 100%
+      );
+      transform: skewX(-25deg);
+    }
+    &:hover::before {
+      animation: shine 0.75s;
+    }
+    &:hover img {
+      transform: scale(1.1);
+    }
+    .date {
+      position: absolute;
+      background-color: #000;
+      color: $text-color;
+      top: 10px;
+      left: 10px;
+      font-size: 16px;
+    }
+    .detail {
+      position: absolute;
+      background-color: rgb(0 0 0 / 70%);
+      width: 100%;
+      bottom: 0;
+      padding: 20px;
+      text-align: left;
+      .name {
+        color: $text-color;
+        letter-spacing: 2px;
+      }
+      .descript {
+        font-size: 24px;
+        font-family: $font-banner;
+      }
+    }
+  }
+}

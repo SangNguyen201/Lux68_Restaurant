@@ -1,0 +1,74 @@
+@import "base";
+.s-menu-food {
+  background-color: rgb(0 0 0 / 90%);
+  position: relative;
+  .inner-box {
+    position: relative;
+    margin-top: 50px;
+    &::after {
+      background: url(/img/separator.2.svg) 50% repeat;
+      bottom: 0;
+      content: "";
+      left: 50%;
+      top: 42%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      transition: all 0.5s ease;
+      width: 40%;
+      height: 95%;
+    }
+  }
+  .content {
+    .intro {
+      color: $text-color;
+      letter-spacing: 2px;
+    }
+    .tittle {
+      font-family: $font-banner;
+      font-size: 40px;
+      @media (max-width: 768px) {
+        font-size: 32px;
+      }
+      @media (max-width: 576px) {
+        font-size: 24px;
+      }
+    }
+    .detail {
+      max-width: 410px;
+      margin: 0 auto;
+      line-height: 20px;
+    }
+  }
+  .item-ani {
+    .item-left {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      animation: item-left linear 3s infinite alternate;
+    }
+    .item-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      animation: item-right linear 3s infinite alternate;
+    }
+  }
+  .thump {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    &::before {
+      @include shine();
+    }
+    &:hover::before {
+      @include hover-shine();
+    }
+  }
+
+  .tittle {
+    font-family: $font-banner;
+    position: relative;
+    z-index: 1;
+  }
+}

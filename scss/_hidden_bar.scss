@@ -1,0 +1,104 @@
+.s-hidden-bar {
+  position: absolute;
+  left: -400px;
+  transition: left 0.35s ease-out;
+  padding: 100px 50px;
+  background-color: #171717;
+  @media (max-width: 992px) {
+    padding: 20px;
+  }
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
+  &.open-menu {
+    left: 0px;
+    z-index: 9999;
+  }
+  .inner-menu {
+    .nav {
+      display: block;
+      #sp a {
+        margin-left: 20px;
+        color: $text-color;
+      }
+      .item-nav {
+        position: relative;
+        &::before {
+          position: absolute;
+          content: "";
+          background-color: #1f1f1f;
+          width: 100%;
+          height: 1px;
+          bottom: -10px;
+        }
+        a {
+          color: #fff;
+          text-decoration: none;
+          transition: 0.5s;
+          display: block;
+          line-height: 20px;
+          margin: 20px 0;
+          &:hover {
+            margin-left: 20px;
+            color: $text-color;
+          }
+        }
+      }
+    }
+  }
+  .btn-close i {
+    position: absolute;
+    right: 20px;
+    font-size: 32px;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover {
+      color: $text-color;
+    }
+  }
+  .brand {
+    .name {
+      font-family: $font-banner;
+      font-size: 40px;
+      @media (max-width: 768px) {
+        font-size: 32px;
+      }
+      @media (max-width: 576px) {
+        font-size: 24px;
+      }
+    }
+    .major {
+      color: $text-color;
+      letter-spacing: 2px;
+    }
+  }
+  .bottom-inner {
+    .name {
+      font-family: $font-banner;
+      margin: 30px 0;
+      font-size: 40px;
+      @media (max-width: 768px) {
+        font-size: 32px;
+      }
+      @media (max-width: 576px) {
+        font-size: 24px;
+        margin: 10px;
+      }
+    }
+    .info {
+      color: #a7a7a7;
+    }
+  }
+  .contact-booking {
+    .bk-phone {
+      font-size: 32px;
+      color: $text-color;
+      @media (max-width: 768px) {
+        font-size: 24px;
+      }
+      @media (max-width: 576px) {
+        font-size: 16px;
+      }
+    }
+  }
+}

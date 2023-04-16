@@ -1,0 +1,188 @@
+.s-selection {
+  background: #000;
+  position: relative;
+  .bg-select {
+    .bg-left {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .bg-right {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+  .inner {
+    .intro {
+      color: $text-color;
+      letter-spacing: 2px;
+    }
+    .tittle {
+      font-size: 40px;
+      font-family: $font-banner;
+      @media (max-width: 992px) {
+        font-size: 32px;
+      }
+      @media (max-width: 768px) {
+        font-size: 32px;
+      }
+      @media (max-width: 567px) {
+        font-size: 24px;
+      }
+    }
+  }
+  .all-day {
+    position: relative;
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      li {
+        margin: 0 50px;
+        font-size: 18px;
+        font-family: $font-banner;
+        position: relative;
+        @media (max-width: 992px) {
+          font-size: 14px;
+          margin: 0 40px;
+        }
+        @media (max-width: 768px) {
+          font-size: 14px;
+          margin: 0 20px;
+        }
+        @media (max-width: 567px) {
+          font-size: 16px;
+          margin: 0 10px;
+        }
+        @media (max-width: 445px) {
+          font-size: 12px;
+          margin: 0 10px;
+        }
+        @media (max-width: 360px) {
+          font-size: 10px;
+          margin: 0 10px;
+        }
+        span {
+          position: absolute;
+          content: "";
+          width: 10px;
+          height: 10px;
+          right: -50px;
+          top: 10px;
+          border: 1px solid $text-color;
+          animation: rectangle 5s ease-out infinite;
+          @media (max-width: 992px) {
+            right: -45px;
+            top: 5px;
+          }
+          @media (max-width: 768px) {
+            right: -25px;
+            top: 7px;
+          }
+          @media (max-width: 567px) {
+            right: -15px;
+            top: 7px;
+          }
+          @media (max-width: 445px) {
+            right: -15px;
+            top: 5px;
+          }
+          @media (max-width: 360px) {
+            right: -15px;
+            top: 2px;
+          }
+        }
+      }
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background: #171819;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      top: -15px;
+      background: #171819;
+    }
+  }
+  .gallery {
+    .best-seller {
+      font-size: 14px;
+      color: #000;
+      background-color: $text-color;
+      padding: 3px 5px;
+      display: inline-block;
+    }
+    .box-right {
+      @media (max-width: 768px) {
+        margin-top: 40px;
+      }
+    }
+    .box {
+      .name {
+        font-size: 18px;
+        @media (max-width: 768px) {
+          font-size: 16px;
+        }
+      }
+      .price {
+        font-size: 18px;
+        @media (max-width: 768px) {
+          font-size: 16px;
+        }
+      }
+      cursor: pointer;
+      .thump {
+        img {
+          opacity: 0.9;
+          transition: 0.3s ease-in-out;
+          transform: scale(0.9);
+        }
+      }
+      &:hover .name {
+        color: $text-color;
+      }
+      &:hover img {
+        transform: scale(1);
+      }
+      @include display(center);
+      .course {
+        @include display(between);
+        font-size: 21px;
+        font-family: $font-banner;
+        .price {
+          color: $text-color;
+        }
+      }
+    }
+    .name {
+      transition: 0.5;
+    }
+    .text {
+      color: #a7a7a7;
+    }
+    .time {
+      font-size: 21px;
+      @media (max-width: 992px) {
+        font-size: 18px;
+      }
+      @media (max-width: 768px) {
+        margin-top: 20px;
+        font-size: 16px;
+      }
+      @media (max-width: 567px) {
+        font-size: 12px;
+        margin-top: 20px;
+      }
+      span {
+        color: $text-color;
+      }
+    }
+  }
+}

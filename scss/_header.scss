@@ -1,0 +1,216 @@
+@import "base";
+header {
+  padding-bottom: 100px;
+  background: url(/img/slider-banner-1.jpg) no-repeat center;
+  background-size: cover;
+  position: relative;
+  @media (max-width: 768px) {
+    padding-bottom: 50px;
+  }
+  @media (max-width: 576px) {
+    padding-bottom: 20px;
+  }
+  .s-layer-hidden {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: 0.5s;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+    &.layer {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  .header-top {
+    .clear-fix {
+      width: 100%;
+      @media (max-width: 1200px) {
+        & {
+          padding: 0;
+        }
+      }
+    }
+    @media (max-width: 992px) {
+      &.header-top {
+        display: none;
+      }
+    }
+    .inner {
+      @include display("mid");
+      padding: 20px 0;
+      position: relative;
+      .left {
+        @include display("center");
+        .location {
+          margin-right: 20px;
+        }
+      }
+      .right {
+        @include display("center");
+        .contact {
+          margin-right: 20px;
+        }
+      }
+      i {
+        margin-right: 5px;
+        color: #fff;
+      }
+    }
+  }
+  // scroll nav header-mid
+  .header-mid {
+    position: fixed;
+    width: 100%;
+    display: block;
+    z-index: 999;
+    transition: 0.5s;
+    top: 40px;
+    // margin-top: 20px;
+
+    @media (max-width: 992px) {
+      & {
+        top: 0px;
+      }
+      @media (max-width: 768px) {
+        top: 0px;
+      }
+    }
+
+    &.fixed {
+      top: 0;
+      background-color: rgb(0 0 0 / 50%);
+
+      @media (max-width: 992px) {
+        & {
+          top: 10px;
+          background-color: rgb(0 0 0 / 50%);
+        }
+      }
+      @media (max-width: 576px) {
+        & {
+          top: 15px;
+        }
+      }
+    }
+    .inner {
+      @include display("mid");
+      align-items: center;
+      @media (max-width: 991px) {
+        flex-direction: row-reverse;
+      }
+
+      .menu i {
+        font-size: 24px;
+        cursor: pointer;
+      }
+      .brand {
+        margin-left: 190px;
+        @media (max-width: 991px) {
+          margin-left: 0;
+        }
+      }
+      .brand h3 {
+        @include brand-h3();
+        @media (max-width: 767px) {
+          font-size: 32px;
+        }
+        @media (max-width: 575px) {
+          font-size: 24px;
+        }
+      }
+      .brand p {
+        @include brand-p();
+        @media (max-width: 575px) {
+          letter-spacing: 0;
+        }
+      }
+      .btn-booking {
+        @media (max-width: 767px) {
+          display: none;
+        }
+        a {
+          @include btn();
+        }
+      }
+    }
+  }
+  .s-content-box {
+    margin-top: 100px;
+    .subtittle {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: $text-color;
+      @media (max-width: 992px) {
+        padding-top: 10px;
+        letter-spacing: 1px;
+      }
+    }
+    .tittle {
+      font-size: 80px;
+      font-family: $font-banner;
+      @media (max-width: 991px) {
+        font-size: 50px;
+      }
+      @media (max-width: 767px) {
+        font-size: 40px;
+      }
+      @media (max-width: 575px) {
+        font-size: 32px;
+      }
+    }
+    .btn-content a {
+      margin: 50px 0;
+      @include btn();
+      @media (max-width: 991px) {
+        padding: 15px 20px;
+        letter-spacing: 0;
+      }
+    }
+    .text {
+      font-size: 18px;
+    }
+  }
+  .booking-btn {
+    a {
+      float: right;
+      background: $text-color;
+      color: #000;
+      display: block;
+      text-align: center;
+      height: 110px;
+      padding: 10px;
+      width: 120px;
+      z-index: 1;
+      top: -50px;
+      position: relative;
+      text-decoration: none;
+      @media (max-width: 991px) {
+        height: 100px;
+        padding: 10px;
+        width: 110px;
+        top: -30px;
+      }
+      @media (max-width: 991px) {
+        height: 80px;
+        padding: 10px;
+        width: 90px;
+        top: -30px;
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        border: 1px solid $text-color;
+        left: 0;
+        top: 0;
+        animation: booking 10s ease-out infinite;
+      }
+    }
+  }
+}
+//--------

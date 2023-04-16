@@ -1,0 +1,73 @@
+.s-special-dish {
+  background-color: rgba(0, 0, 0, 0.9);
+  @media (max-width: 768px) {
+    padding: 0px;
+  }
+  .position-dish {
+    position: relative;
+    .item-chili {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  .left-dish {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  .right-dish {
+    @media (max-width: 768px) {
+      margin: 20px 0;
+    }
+    .item-dish {
+      position: absolute;
+      left: 0;
+      top: 0;
+      animation: left-dish 3s linear infinite alternate;
+    }
+    .intro {
+      color: $text-color;
+      letter-spacing: 2px;
+    }
+    .tittle {
+      font-size: 40px;
+      font-family: $font-banner;
+      @media (max-width: 992px) {
+        font-size: 32px;
+      }
+      @media (max-width: 768px) {
+        font-size: 32px;
+      }
+      @media (max-width: 576px) {
+        font-size: 24px;
+      }
+    }
+    .detail {
+      line-height: 30px;
+    }
+    .price {
+      .original {
+        font-size: 24px;
+        color: rgb(228 197 144 / 20%);
+        @media (max-width: 768px) {
+          font-size: 16px;
+        }
+      }
+      .reduce {
+        font-size: 32px;
+        color: $text-color;
+        @media (max-width: 768px) {
+          font-size: 24px;
+        }
+        @media (max-width: 567px) {
+          font-size: 16px;
+        }
+      }
+    }
+    .btn-dish {
+      @include btn();
+    }
+  }
+}

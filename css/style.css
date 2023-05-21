@@ -154,7 +154,7 @@ li {
 }
 header {
   padding-bottom: 100px;
-  background-image: url(/img/slider-banner-1.jpg);
+  background-image: url(../img/slider-banner-1.jpg);
   background-size: cover;
   position: relative;
 }
